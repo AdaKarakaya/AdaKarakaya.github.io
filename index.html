@@ -3,12 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benim GitHub Sitem</title>
+    <title>Ada Haydar Karakaya - Yönetim Bilişim Sistemleri Öğrencisi</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Merhaba Dünya! GitHub Pages'e Hoş Geldiniz!</h1>
-    <p>Bu benim ilk web sitem.</p>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#about" class="logo">Ada Karakaya</a>
+                <ul class="nav-links">
+                    <li><a href="#about">Hakkımda</a></li>
+                    <li><a href="#experience">Deneyim & Eğitim</a></li>
+                    <li><a href="#projects">Projeler</a></li>
+                    <li><a href="#skills">Beceriler</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+                <div class="burger-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="hero">
+        <div class="background-animation"></div>
+        <div class="container hero-content">
+            <img src="profile.jpg" alt="Ada Haydar Karakaya" class="profile-img fade-in-up">
+            <h1 class="fade-in-up">Merhaba, ben Ada Haydar Karakaya!</h1>
+            <p class="fade-in-up">İstanbul Medipol Üniversitesi'nde <span class="highlight-text">Yönetim Bilişim Sistemleri 3. sınıf öğrencisiyim</span> ve <span class="typewriter"></span></p>
+            <p class="fade-in-up description">Özellikle <span class="highlight-text">SQL ve veri tabanı yönetimi</span> konularına ilgi duyuyorum. Analitik düşünme becerim ve öğrenmeye olan isteğimle, teknoloji alanında kendimi geliştirmeye odaklıyım. Takım çalışmasına yatkın, sorumluluk sahibi ve iletişime açık bir öğrenci olarak staj sürecinde teorik bilgilerimi pratiğe dökmeyi ve yeni deneyimler kazanmayı hedefliyorum.</p>
+            <div class="cta-buttons fade-in-up">
+                <a href="#projects" class="btn primary-btn">Projelerimi İncele</a>
+                <a href="ADA_KARAKAYA_CV.pdf" class="btn secondary-btn" download>CV'mi İndir <i class="fas fa-download"></i></a>
+            </div>
+            <div class="social-hero fade-in-up">
+                <a href="https://github.com/AdaKarakaya" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/adahaydarakarakaya" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section-dark">
+        <div class="container">
+            <h2>Eğitim ve Deneyim Geçmişi</h2> 
+            <div class="timeline">
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>IT Stajyeri <span class="company-name">@MET-GÜN İnşaat</span></h3>
+                        <p class="timeline-date">Ağustos 2025 - Eylül 2025</p>
+                        <p>MET-GÜN İnşaat'taki stajım süresince, bilişim sistemleri süreçlerine aktif destek sağlayarak teorik bilgilerimi pratik deneyimlerle pekiştirmeyi ve kurumsal IT ortamında kendimi geliştirmeyi hedefliyorum.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Yönetim Bilişim Sistemleri Lisans <span class="company-name">@İstanbul Medipol Üniversitesi</span></h3>
+                        <p class="timeline-date">Eylül 2023 - Devam Ediyor</p>
+                        <p>Yönetim Bilişim Sistemleri 3. sınıf öğrencisiyim. Özellikle SQL ve veritabanı yönetimi konularına büyük ilgi duyuyorum. Analitik düşünme becerilerimi kullanarak Veri Bilimi, Sistem Analizi ve Tasarımı gibi temel YBS derslerinde aktif rol alıyorum. Öğrenmeye olan isteğim ve teknoloji alanında kendimi sürekli geliştirme hedefimle, takım çalışmasına yatkın ve sorumluluk sahibi bir öğrenci olarak projelerde yer alıyorum.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Lise Eğitimi <span class="company-name">@Yakacık Doğa Anadolu Lisesi</span></h3>
+                        <p class="timeline-date">Eylül 2019 - Haziran 2023</p>
+                        <p>Lise eğitimimi başarıyla tamamladım.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section-light">
+        <div class="container">
+            <h2>Öne Çıkan Projelerim</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">Tümü</button>
+                <button class="filter-btn" data-filter="web">Web Geliştirme</button>
+                <button class="filter-btn" data-filter="game">Oyun Geliştirme</button>
+            </div>
+            <div class="project-grid">
+                <div class="project-card fade-in-up" data-category="web">
+                    <img src="project-ecommerce.jpg" alt="Web Sitesi Projesi Resmi">
+                    <h3>Basit Web Sitesi Tasarımı</h3>
+                    <p class="project-tags"><span>HTML</span> <span>CSS</span> <span>JavaScript</span></p>
+                    <p>HTML, CSS ve temel JavaScript kullanarak interaktif bir web sayfası tasarladım. Bu proje ile frontend geliştirme becerilerimi pekiştirdim ve kullanıcı arayüzü oluşturma deneyimi kazandım.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/AdaKarakaya/simple-website-repo" target="_blank" class="btn-small">GitHub <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-card fade-in-up" data-category="game">
+                    <img src="project-unity-draft.jpg" alt="Süper Lig Draft Simülatörü Resmi">
+                    <h3>Süper Lig Draft Simülatörü (Unity GameDev)</h3>
+                    <p class="project-tags"><span>Unity</span> <span>C#</span> <span>Git & GitHub</span> <span>Oyun Tasarımı</span></p>
+                    <p>Unity oyun motorunu kullanarak geliştirdiğim, Süper Lig oyuncularıyla takım kurma ve yapay zeka (AI) rakiplere karşı simülasyon maçları yapma odaklı kişisel bir hobi projesidir. Oyun içi mekanikler, kullanıcı arayüzü (UI) ve temel yapay zeka (AI) algoritmalarının programlanması, versiyon kontrol yönetimi ve oyun tasarımı alanlarında deneyim kazandım.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/AdaKarakaya/FutDraft" target="_blank" class="btn-small">GitHub <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section-dark">
+        <div class="container">
+            <h2>Teknik ve Temel Becerilerim</h2>
+            <div class="skills-grid">
+                <div class="skill-item fade-in-up">
+                    <i class="fas fa-database skill-icon"></i>
+                    <h3>Microsoft SQL Server</h3>
+                    <div class="skill-level"><span style="width: 70%;"></span></div>
+                    <p>Orta Seviye</p>
+                </div>
+                <div class="skill-item fade-in-up">
+                    <i class="fab fa-microsoft skill-icon"></i>
+                    <h3>MS Office (Word, Excel, Outlook)</h3>
+                    <div class="skill-level"><span style="width: 85%;"></span></div>
+                    <p>İyi Seviye</p>
+                </div>
+                <div class="skill-item fade-in-up">
+                    <i class="fab fa-python skill-icon"></i>
+                    <h3>Python</h3>
+                    <div class="skill-level"><span style="width: 50%;"></span></div>
+                    <p>Temel Seviye</p>
+                </div>
+                 <div class="skill-item fade-in-up">
+                    <i class="fas fa-code skill-icon"></i>
+                    <h3>C#</h3>
+                    <div class="skill-level"><span style="width: 40%;"></span></div>
+                    <p>Temel Seviye</p>
+                </div>
+                <div class="skill-item fade-in-up">
+                    <i class="fas fa-chart-pie skill-icon"></i>
+                    <h3>Analitik Düşünme</h3>
+                    <div class="skill-level"><span style="width: 80%;"></span></div>
+                    <p>İyi Seviye</p>
+                </div>
+                <div class="skill-item fade-in-up">
+                    <i class="fas fa-users skill-icon"></i>
+                    <h3>Takım Çalışması</h3>
+                    <div class="skill-level"><span style="width: 90%;"></span></div>
+                    <p>Çok İyi Seviye</p>
+                </div>
+                <div class="skill-item fade-in-up">
+                    <i class="fab fa-github skill-icon"></i>
+                    <h3>Git & GitHub</h3>
+                    <div class="skill-level"><span style="width: 65%;"></span></div>
+                    <p>Orta Seviye</p>
+                </div>
+                <div class="skill-item fade-in-up">
+                    <i class="fas fa-comments skill-icon"></i>
+                    <h3>Etkili İletişim</h3>
+                    <div class="skill-level"><span style="width: 85%;"></span></div>
+                    <p>İyi Seviye</p>
+                </div>
+                <div class="skill-item fade-in-up">
+                    <i class="fas fa-share-alt skill-icon"></i>
+                    <h3>Sosyal Medya Kullanımı</h3>
+                    <div class="skill-level"><span style="width: 75%;"></span></div>
+                    <p>Orta/İyi Seviye</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-light">
+        <div class="container">
+            <h2>İletişim Kur</h2>
+            <p>Staj fırsatları, projeler veya sadece bir merhaba demek için benimle iletişime geçebilirsiniz!</p>
+            <form action="https://formspree.io/f/mdkdzjnp" method="POST" class="contact-form fade-in-up">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Adınız Soyadınız" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="E-posta Adresiniz" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" name="subject" placeholder="Konu" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Mesajınız" rows="8" required></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn">Mesaj Gönder <i class="fas fa-paper-plane"></i></button>
+            </form>
+            <div class="contact-info fade-in-up">
+                <p><i class="fas fa-envelope"></i> adahaydarx@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +90 543 591 11 11</p>
+                <p><i class="fas fa-map-marker-alt"></i> Pendik, İstanbul, Türkiye</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Ada Haydar Karakaya. Tüm Hakları Saklıdır.</p>
+            <div class="footer-social">
+                <a href="https://github.com/AdaKarakaya" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/adakarakaya" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
