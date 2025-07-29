@@ -673,6 +673,9 @@ footer {
 .burger-menu {
     display: none; /* Masaüstünde gizli */
     cursor: pointer;
+    /* Eğer burger menü çizgileri div elementleri ise */
+    /* ve bunlar .line1, .line2, .line3 sınıflarına sahip değilse */
+    /* Bu kısım HTML yapınıza göre ayarlanmalıdır */
 }
 
 .burger-menu div {
@@ -685,38 +688,14 @@ footer {
 
 /* Responsive Tasarım */
 @media (max-width: 992px) {
-    .nav-links {
-        position: absolute;
-        right: 0;
-        top: 60px; /* Header yüksekliğine göre ayarla */
-        height: calc(100vh - 60px);
-        background-color: var(--secondary-color);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 60%;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-        padding-top: 20px;
-    }
-
-    .nav-links.nav-active {
-        transform: translateX(0%);
-    }
-
-    .nav-links li {
-        opacity: 0;
-        margin: 20px 0;
-    }
-
-    .nav-links li a {
-        font-size: 1.3em;
-    }
-
+    /* Burger menü sadece mobil görünümde gösterilir */
     .burger-menu {
         display: block;
     }
 
+    /* Burger Menü Animasyonu (açık durum) */
+    /* Bu kuralların çalışması için burger menünüzdeki 3 div'in
+       sırasıyla .line1, .line2, .line3 sınıflarına sahip olması gerekir. */
     .burger-menu.toggle .line1 {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
@@ -729,6 +708,66 @@ footer {
         transform: rotate(45deg) translate(-5px, -6px);
     }
 
+
+    /* Mobil Navigasyon Menüsü */
+    .nav-links {
+        position: fixed; /* Ekran içinde sabit kalır */
+        right: 0;
+        top: 0; /* Ekranın en üstünden başlar */
+        height: 100vh; /* Ekranın tüm yüksekliğini kaplar */
+        background-color: var(--secondary-color); /* Koyu gri/mavi arkaplan */
+        display: flex;
+        flex-direction: column; /* Menü öğeleri alt alta */
+        align-items: center; /* Yatayda ortalar */
+        justify-content: center; /* Dikeyde ortalar */
+        width: 70%; /* Ekranın %70'ini kaplar */
+        transform: translateX(100%); /* Başlangıçta ekranın sağ dışında */
+        transition: transform 0.4s ease-in-out; /* Açılma/kapanma animasyonu */
+        z-index: 9999; /* Diğer tüm içeriğin üzerinde olduğundan emin olun */
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3); /* Hafif bir gölge */
+        padding-top: 60px; /* Üstten boşluk, başlık için */
+        box-sizing: border-box; /* Padding ve border'ın genişliğe dahil olmasını sağlar */
+        overflow-y: auto; /* İçerik taşarsa dikeyde kaydırılabilir olsun */
+    }
+
+    .nav-links.nav-active {
+        transform: translateX(0%); /* 'nav-active' eklendiğinde ekrana gel */
+    }
+
+    .nav-links li {
+        margin: 25px 0; /* Liste öğeleri arasında boşluk */
+        opacity: 0; /* Başlangıçta gizli */
+        display: block; /* Her li öğesinin ayrı bir blok olarak davranmasını sağlar */
+        width: 100%; /* Kapsayıcısının genişliğinin tamamını kullanır */
+        text-align: center; /* Metni li içinde ortalar */
+    }
+
+    /* Menü açıldığında liste öğelerini görünür yap */
+    .nav-links.nav-active li {
+        opacity: 1;
+        transition: opacity 0.5s ease 0.3s; /* Gecikmeli animasyon */
+    }
+
+    .nav-links li a {
+        color: var(--text-light); /* Link metin rengi (açık beyaz) */
+        font-size: 1.8em; /* Linklerin boyutu */
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        display: block; /* Tıklama alanını tüm li alanına yay */
+        padding: 10px 0; /* Dokunma alanı için padding */
+    }
+
+    .nav-links li a:hover {
+        color: var(--primary-color);
+    }
+
+    /* Scroll Lock for body */
+    body.no-scroll {
+        overflow: hidden;
+    }
+
+    /* Genel responsive ayarlar */
     .hero h1 {
         font-size: 2.5em;
     }
@@ -764,7 +803,7 @@ footer {
 
     .timeline-item:nth-child(odd) .timeline-content::after,
     .timeline-item:nth-child(even) .timeline-content::after {
-        left: 0px; /* Okun pozisyonunu düzelt */
+        left: 0px;
         border-width: 10px 10px 10px 0;
         border-color: transparent var(--bg-dark) transparent transparent;
     }
@@ -798,7 +837,7 @@ footer {
     }
 
     .project-card {
-        margin: 0 10px; /* Yanlarda biraz boşluk */
+        margin: 0 10px;
     }
 }
 
